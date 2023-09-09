@@ -41,7 +41,7 @@ Arduino is an open-source platform that helps circuit developers build electroni
 
 <details>
  <summary>
-   Introductio to RISC-V
+   Introduction to RISC-V
  </summary>
 
 **RISC-V**
