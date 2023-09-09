@@ -244,6 +244,7 @@ strategy for a given design.
 **Logic Equivalence check**
 
  + Every time the netlist is modified (ECO), verification must be performed
+   
       1.CTS modifies the netlist
    
       2.Post Placement optimizations modifies the netlist
@@ -256,6 +257,7 @@ strategy for a given design.
  + Transistor gates can be damaged during fabrication
 
  + Two solutions:
+   
  1.Bridging attaches a higher layer intermediary
     + Requires Router awareness (not there yet!)
 
