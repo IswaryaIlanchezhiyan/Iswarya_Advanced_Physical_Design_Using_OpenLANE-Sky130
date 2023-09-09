@@ -97,4 +97,14 @@ Initially, we get specifications from ISA and write a HDL (Hardware Description 
 + Memory Allocation & Stack Pointer
 
 </details>
+
+<details>
+ <summary>
+   SoC Design and OpenLANE
+ </summary>
+
+ <summary>
+  skljcjalk
+ </summary>
+</details>
  
