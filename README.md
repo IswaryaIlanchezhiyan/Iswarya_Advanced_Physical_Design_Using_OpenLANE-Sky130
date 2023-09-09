@@ -38,4 +38,63 @@ Arduino is an open-source platform that helps circuit developers build electroni
    **Macros** - Macro Cells are the Memory cells. These IPs have been designed by some other Analog design team, which can be used in the floor plan stage of the design.
 
 </details>
+
+<details>
+ <summary>
+   Introductio to RISC-V
+ </summary>
+
+**RISC-V**
+
+ RISC-V (“risk-five”) is an instruction set architecture (ISA) rooted in reduced instruction set computer (RISC) principles. RISC-V is unique, even revolutionary, because it is a common, free, open-source ISA to which software can be ported, hardware can be developed, and processors can be built to support it.
+
+**ISA**
+
+An Instruction Set Architecture (ISA) is part of the abstract model of a computer that defines how the CPU is controlled by the software. The ISA acts as an interface between the hardware and the software, specifying both what the processor is capable of doing as well as how it gets done.The ISA provides the only way through which a user is able to interact with the hardware.
+
+ISA also known as **Abstract Interface** and **Architecture of Computer**.
+
+ **Diagrammatic Representation**
+
+![Diagrammatic Representation](https://github.com/IswaryaIlanchezhiyan/Iswarya-RISC-V/assets/140998760/04cf63c8-a085-45c8-9879-791dbaae9c32)
+
+**System Software**
+
+System Software is the interface between Hardware and User Applications.System Software includes
++ Operating Systems
++ Compiler
++ Assembler
+
+**Operating Systems**
+
+It converts apps into their respective assembly language program and then into binary code for the hardware to understand it.
+It also 
++ handle IO operations
++ allocate memory
++ low level system functions
+
+
+**Compiler**
+
+It is a special program that translates a programming language's source code into Instruction sets(.exe file).
+
+Instruction sets depends on the hardware that we are going to use.
+
+**Assembler**
+
+It converts Instruction sets into binary code(logic 1 & logic 0).
+
+**Instruction Sets**
+
+Initially, we get specifications from ISA and write a HDL (Hardware Description Language) code which get synthesized into a gate level design .Gate Level Design is then converted into respective layout(Hardware).
+
+**Instruction Set Architecture** has
++ Pseudo Instructions
++ Base Integer Instructions(RV64I)
++ Multiply Extension(RV64M)
++ Single & Double precision floating point extension (RV64F & RV64D)
++ Application Binary Interface
++ Memory Allocation & Stack Pointer
+
+</details>
  
