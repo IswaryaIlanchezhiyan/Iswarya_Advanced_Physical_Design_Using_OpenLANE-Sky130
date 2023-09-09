@@ -153,6 +153,7 @@ Place the cells on the floorplan rows,aligned with the sites
 Placement usually done in 2 steps:
 
 1.Global
+
 2.Detailed
 
 ![placement 2](https://github.com/IswaryaIlanchezhiyan/Iswarya_sky130/assets/140998760/fd5c2425-ecbe-4320-8aad-dc0d0d17ef2b)
