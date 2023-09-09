@@ -150,6 +150,40 @@ Place the cells on the floorplan rows,aligned with the sites
 
 ![placement](https://github.com/IswaryaIlanchezhiyan/Iswarya_sky130/assets/140998760/b69fedde-2145-483e-9951-8f30fb5bedfb)
 
+Placement usually done in 2 steps:
+
+1.Global
+2.Detailed
+
+![placement 2](https://github.com/IswaryaIlanchezhiyan/Iswarya_sky130/assets/140998760/fd5c2425-ecbe-4320-8aad-dc0d0d17ef2b)
+
+**Clock Tree Synthesis**
+
+The concept of Clock Tree Synthesis (CTS ) is the automatic insertion of buffers/inverters along the clock paths of the ASIC design in order to balance the clock delay to all clock inputs. In order to balance clock skew and minimize insertion delay, CTS is performed.
+
+A clock tree has different structures:
+
++ Fish bone+
++ H-tree
++ X-tree
++ Multi-level clock tree
+
+**Routing**
+
+Routing is making physical connections between signal pins using metal layers.
+
+![routing](https://github.com/IswaryaIlanchezhiyan/Iswarya_sky130/assets/140998760/54e16de1-7e88-46de-b615-1f0222f9b14f)
+
+**Sign Off**
+
+Sign off includes 
++ the physical verification of the design
++  the timing verification of the design
++  the power verification of the design
++  the electrical verification of the design
+  
+ Once all these verifications are completed and the chip is deemed to be functioning as expected, the design can be signed off.
+
 
 
 
