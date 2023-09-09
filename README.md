@@ -102,10 +102,8 @@ Initially, we get specifications from ISA and write a HDL (Hardware Description 
  <summary>
    SoC Design and OpenLANE
  </summary>
+- [Introduction to all components of open-source digital ASIC design]
 
-<summary>
-    Introduction to all components of open-source digital ASIC design
-</summary>
 
 ASIC Enablers
 + RTL IPs
