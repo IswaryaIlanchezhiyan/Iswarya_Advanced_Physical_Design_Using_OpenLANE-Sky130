@@ -121,5 +121,44 @@ A Process Design Kit (PDK) is a library of basic photonic components generated b
 
 ![ASIC enabler](https://github.com/IswaryaIlanchezhiyan/Iswarya_sky130/assets/140998760/89b2d0e3-b60f-4287-8ccd-57e2f1380b33)
 
+**Simplified RTL2GDS flow**
+
+![rtl2gdsflow](https://github.com/IswaryaIlanchezhiyan/Iswarya_sky130/assets/140998760/bdefd1a0-895d-4a98-98f5-e0f9303900ef)
+
+**1.Synthesis** - converts RTL to a circuit out of components from the standard cell library.
+A standard-cell library is a collection of low-level electronic logic functions such as AND, OR, INVERT, flip-flops, latches, and buffers. These cells are realized as fixed-height, variable-width full-custom cells.
+
+![synthesis](https://github.com/IswaryaIlanchezhiyan/Iswarya_sky130/assets/140998760/46e85e6e-695b-4fa8-a97b-2b74ec62a41e)
+
+**2.Floor/Power Planning**  
+
+Chip Floor-planning - partition the chip die between different system building blocks and place the I/O pads
+
+![chip planning](https://github.com/IswaryaIlanchezhiyan/Iswarya_sky130/assets/140998760/c44a7036-1c6e-4053-b075-ca043f3e7c2a)
+
+Macro Floor-planning - dimensions,pin locations,row dimensions
+
+![macro plan](https://github.com/IswaryaIlanchezhiyan/Iswarya_sky130/assets/140998760/83228a9f-0aa5-48f0-ab5d-e504e3a752e0)
+
+Power Planning  - provide power to the every macros, standard cells, and all other cells are present in the design
+
+![power plan](https://github.com/IswaryaIlanchezhiyan/Iswarya_sky130/assets/140998760/bde5f4bc-ba2f-4d6e-bf8c-9005d3563c34)
+
+**Placement** 
+
+Place the cells on the floorplan rows,aligned with the sites
+
+![placement](https://github.com/IswaryaIlanchezhiyan/Iswarya_sky130/assets/140998760/b69fedde-2145-483e-9951-8f30fb5bedfb)
+
+
+
+
+
+
+
+
+
+
+
 </details>
  
