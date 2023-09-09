@@ -25,7 +25,7 @@ Arduino is an open-source platform that helps circuit developers build electroni
 
    Components inside the chip
    
-    ![arduino chip](https://github.com/IswaryaIlanchezhiyan/Iswarya_sky130/assets/140998760/e3618f3c-d071-40ee-abe0-95c22a16438f)
+   ![arduino chip](https://github.com/IswaryaIlanchezhiyan/Iswarya_sky130/assets/140998760/e3618f3c-d071-40ee-abe0-95c22a16438f)
 
    **Pads** - are something through which we can send signals inside the chip.
 
