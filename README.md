@@ -185,6 +185,91 @@ Sign off includes
   
  Once all these verifications are completed and the chip is deemed to be functioning as expected, the design can be signed off.
 
+ **Introduction to OpenLANE and Strive chipsets**
+
+ **OpenLane** is a RTL to GDSII infrastructure library based on several components including OpenROAD, Yosys, Magic, Netgen, CVC, SPEF-Extractor, KLayout and a number of custom scripts for design exploration and optimization.
+
+ OpenLane abstracts the underlying open source utilities, and allows users to configure all their behavior with just a single configuration file, but also allows for completely custom, Python-based scripts.
+
+ OpenLANE can be used to harden Macros and Chips.
+
+ Two modes of operation:
+
+ + Autonomous or Interactive
+ + Design Space Exploration
+
+**Introduction to OPenLANE detailed ASIC Design flow**
+
+![openlane designflow](https://github.com/IswaryaIlanchezhiyan/Iswarya_sky130/assets/140998760/10ba224c-7974-47fb-9bcb-8b07b8125485)
+
+**Synthesis Exploration**
+
+
++ Yosys is used for RTL synthesis
++ ABC is used for logic synthesis and technology mapping
+
+ ABC needs a script that defines the sequence of optimization operations.OpenLane comes with several synthesis scripts,We call them “Synthesis Strategies”.Synthesis Exploration can help picking the best
+strategy for a given design.
+
+**Design Exploration**
+
+ + OpenLane has 16 design specific configurations
+ + Not all combinations may result in a DRC clean layout
+ + OpenLane can sweep different parameters to help with that
+ + For each run, OpenLane collects around 35 different design metrics
+
+**OPenLANE Regression**
+
++ The design exploration utility is, also, used for regression testing
++ We run OpenLane on ~70 designs and compare the results to the best known ones
+
+**Design for Test**
+
+ + Scan Insertion
+ + Automatic Test Pattern Generation (ATPG)
+ + Test Patterns Compaction
+ + Fault Coverage
+ + Fault Simulation
+
+**Physical Implementation**
+
++ Also called automated PnR (Place and Route)
++ Floor/Power Planning
++ End Decoupling Capacitors and Tap cells insertion
++ Placement: Global and Detailed
++ Post placement optimization
++ Clock Tree Synthesis (CTS)
++ Routing: Global and Detailed
+
+**Logic Equivalence check**
+
+ + Every time the netlist is modified (ECO), verification must be performed
+      1.CTS modifies the netlist
+   
+      2.Post Placement optimizations modifies the netlist
+ + LEC is used to formally confirm that the function did not change by modifying the netlist
+
+**Dealing with Antenna Violations**
+
+ + When a metal wire segment is fabricated, it can act as an antenna.
+ + Reactive ion etching causes charge to accumulate on the wire.
+ + Transistor gates can be damaged during fabrication
+
+ + Two solutions:
+ 1.Bridging attaches a higher layer intermediary
+    + Requires Router awareness (not there yet!)
+
+ 2.Add antenna diode cell to leak away charges
+    + Antenna diodes are provided by the SCL
+
+**Physical verification DRC & LVS**
+
+ + Magic is used for Design Rules Checking and SPICE Extraction from Layout
+ + Netgen is used for LVS
+ + Extracted SPICE by Magic vs. Verilog netlist
+
+
+
 
 
 
