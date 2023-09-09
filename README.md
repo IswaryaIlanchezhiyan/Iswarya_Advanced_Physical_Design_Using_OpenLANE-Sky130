@@ -258,11 +258,11 @@ strategy for a given design.
 
  + Two solutions:
    
- 1.Bridging attaches a higher layer intermediary
-    + Requires Router awareness (not there yet!)
+   1.Bridging attaches a higher layer intermediary
+      + Requires Router awareness (not there yet!)
 
- 2.Add antenna diode cell to leak away charges
-    + Antenna diodes are provided by the SCL
+   2.Add antenna diode cell to leak away charges
+      + Antenna diodes are provided by the SCL
 
 **Physical verification DRC & LVS**
 
