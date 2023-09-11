@@ -359,6 +359,32 @@ Flop Ratio = (Number of D Flipflops)/(Total Number of Cells) = (1596)/(10104) = 
    Chip Floor planning considerations
   </summary>
 
+  **Utilization Factor and Aspect Ratio**
+
+  ```
+
+  Utilization Factor =  Area occupied the Netlist
+                        __________________________
+                        Total Area of the Core
+
+```
+
+```
+
+ Aspect Ratio = Height
+                _______
+                Width
+
+```
+If the value of Aspect Ratio is 1,the chip is square shaped.
+
+**Preplaced of Cells**
+
+The very first step in chip design is floorplanning, in which the width and height of the chip, basically the area of the chip, is defined. A chip consists of two parts, 'core' and 'die'.During placement and routing, most of the placement tools, place/move logic cells based on floorplan specifications. Some of the important or critical cell's locations has to be pre-defined before actual placement and routing stages. The critical cells are mostly the cells related to clocks, viz. clock buffers, clock mux, etc. and also few other cells such as RAM's, ROM,s etc. Since, these cells are placed in to core before placement and routing stage, they are called 'preplaced cells'. 
+
+**De-coupling Capacitors**
+
+
   
  </details>
  
