@@ -1,47 +1,6 @@
 # Advanced Physical Design using OpenLANE/Sky130
 # Table of Contents 
- - [Day0 -Installation ](#Installation)<br>
  - [Day1 -Inception of open-source EDA,OpenLANE and Sky130PDK ](#Inception-of-open-source-EDA,OpenLANE-and-Sky130PDK)<br>
-
- # Day 0
- # Installation
-
- <details>
- <summary>
-   OpenLANE
- </summary>
- I installed OpenLANE using the following commands:
-
- ```
-
-$ sudo apt-get update
-$ sudo apt-get upgrade
-$ sudo apt install -y build-essential python3 python3-venv python3-pip make git
-$ sudo apt install apt-transport-https ca-certificates curl software-properties-common
-$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-$ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-$ sudo apt update
-$ sudo apt install docker-ce docker-ce-cli containerd.io
-$ sudo docker run hello-world
-$ sudo groupadd docker
-$ sudo usermod -aG docker $USER
-$ sudo reboot
-
-```
-
-After Reboot
-
-```
-
-$ docker run hello-world
-
-```
-
-Below is the screenshot of successful launch
-
-![Screenshot from 2023-09-05 18-00-04](https://github.com/IswaryaIlanchezhiyan/Iswarya_asic_course/assets/140998760/c5b4808f-c46e-476c-affb-0edd9353880d)
-
-</details>
 
  # Day 1
  # Inception of open-source EDA,OpenLANE and Sky130PDK
@@ -316,6 +275,83 @@ strategy for a given design.
    Open source EDA Tools
  </summary>
 
+
  
-</details>
+Docker Installation:
+
+ ```
+
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt install -y build-essential python3 python3-venv python3-pip make git
+$ sudo apt install apt-transport-https ca-certificates curl software-properties-common
+$ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+$ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+$ sudo apt update
+$ sudo apt install docker-ce docker-ce-cli containerd.io
+$ sudo docker run hello-world
+$ sudo groupadd docker
+$ sudo usermod -aG docker $USER
+$ sudo reboot
+
+```
+
+After Reboot
+
+```
+
+$ docker run hello-world
+
+```
+
+Below is the screenshot of successful launch
+
+![Screenshot from 2023-09-05 18-00-04](https://github.com/IswaryaIlanchezhiyan/Iswarya_asic_course/assets/140998760/c5b4808f-c46e-476c-affb-0edd9353880d)
+
+OpenLANE Installation:
+
+```
+
+$ git clone https://github.com/The-OpenROAD-Project/OpenLane --recurse-submodules 
+$ cd OpenLane
+$ sudo make
+$ sudo make test
+
+```
+
+Invoking OpenLANE:
+
+```
+
+$ sudo make mount
+./flow.tcl -interactive
+package require openlane 0.9
+prep -design picorv32a
+run_synthesis
+
+```
+
+![openlane install](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/a0f8dcb4-2fea-4134-a6d3-90e531aecd10)
+
+To view the synthesis report:
+
+```
+
+cd /OpenLane/designs/picorv32a/runs/RUN_2023.09.11_10.18.48/reports/synthesis
+vim 1-synthesis.AREA_0.stat.rpt
+
+```
+
+![synthesis report](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/2730d4ff-1429-4329-9caf-ec32f8ced042)
+
+**Flop Ratio**
+
+Flop Ratio = (Number of D Flipflops)/(Total Number of Cells) = (1596)/(10104) =  0.1579
+
+
+
+
+
+
+ </details>
  
