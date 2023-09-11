@@ -1,4 +1,4 @@
-# OpenLANE/Sky130
+# Advanced Physical Design using OpenLANE/Sky130
 # Table of Contents 
  - [Day0 -Installation ](#Installation)<br>
  - [Day1 -Inception of open-source EDA,OpenLANE and Sky130PDK ](#Inception-of-open-source-EDA,OpenLANE-and-Sky130PDK)<br>
