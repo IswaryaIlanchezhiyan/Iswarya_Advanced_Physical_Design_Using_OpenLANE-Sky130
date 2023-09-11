@@ -1,6 +1,7 @@
 # Advanced Physical Design using OpenLANE/Sky130
 # Table of Contents 
  - [Day1 -Inception of open-source EDA,OpenLANE and Sky130PDK ](#Inception-of-open-source-EDA,OpenLANE-and-Sky130PDK)<br>
+ - [Day2 -Good floorplan vs Bad floorplan and Introduction to library cells](#Good-floorplan-vs-Bad-floorplan-and-Introduction-to-library-cells)<br>
 
  # Day 1
  # Inception of open-source EDA,OpenLANE and Sky130PDK
@@ -348,10 +349,16 @@ vim 1-synthesis.AREA_0.stat.rpt
 
 Flop Ratio = (Number of D Flipflops)/(Total Number of Cells) = (1596)/(10104) =  0.1579
 
+ </details>
 
+ # Day 2
+ # Good floorplan vs Bad floorplan and Introduction to library cells
 
+ <details>
+  <summary>
+   Chip Floor planning considerations
+  </summary>
 
-
-
+  
  </details>
  
