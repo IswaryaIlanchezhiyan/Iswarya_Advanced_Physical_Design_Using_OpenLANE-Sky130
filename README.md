@@ -429,6 +429,18 @@ run_floorplanning
 
   **Netlist Binding and initial Design**
 
+  In electronic design, a netlist is a description of the connectivity of an electronic circuit. In its simplest form, a netlist consists of a list of the electronic components in a circuit and a list of the nodes they are connected to. Generally,we have gates like and,or etc. and flipflops in our design.But in reality,they have a physical dimension like square,rectangular etc.
+
+  The cells in the design have various parameters like width,height,time information.delay and certains conditions for execution all the parameters are stored in Library.
+
+  **Optimized Placement**
+
+  Now ,we have to place the cells in the floorplan.If the input to the cells are far away from each other ,Repeaters (Buffers) are placed inbetween Input pin and Cells for passing correct information and for reducing delay.
+
+![optimize placement](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/4597080d-fda0-4325-94e5-e7c17f8f5c05)
+
+
+
   
  </details>
  
