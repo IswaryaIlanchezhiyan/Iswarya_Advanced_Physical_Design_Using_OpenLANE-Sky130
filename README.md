@@ -384,6 +384,46 @@ The very first step in chip design is floorplanning, in which the width and heig
 
 **De-coupling Capacitors**
 
+A decoupling capacitor is a capacitor, which is used decouple the critical cells from main power supply, in order to protect the cells from the disturbance occuring in the power distribution lines and source. The purpose of using decoupling capacitors is to deliver current to the gates during switching.
+
+**Power Planning**
+
+One of the most important stages in physical design is power planning. It will be utilized to supply power to macros and standard cells while staying under the IR-Drop limit. The resistance of the metal wires that make up the power distribution network causes a steady-state IR Drop. Steady-state IR Drop minimizes the voltage differential between local power and ground, lowering the speed and noise immunity of local cells and macros.
+
+![powerplanning](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/b0c7884b-258b-43d3-b798-5b758f64346e)
+
+Rings: Its Carries VDD and VSS around the chip
+
+Stripes: Its Carries VDD and VSS from Rings across the chip
+
+Rails: It connects VDD and VSS to the standard cell VDD and VSS.
+
+Trunk: The connection between Pad and Ring
+
+Pad: Interface from IC  to the outside world.
+
+Power Planning calculates  the required number of power pins,Rings and stripes count,Ring and striped widths,IR drop.
+
+
+**Pin Placement and Logical Cell Placement Blockage**
+
+Pin Placement details basically come from the TOP level design where we are having information to place pins according to the interaction with other HMs.
+We need to define edge, layer and location before placing pins.After pin placement, IO Pad placement happens.
+
+**Steps to run Floor paln using OpenLANE**
+
+```
+
+run_floorplanning
+
+```
+
+![runfloorplan](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/21082ce8-16a5-45d7-8645-b053d6d305a3)
+
+
+
+
+
   
  </details>
  
