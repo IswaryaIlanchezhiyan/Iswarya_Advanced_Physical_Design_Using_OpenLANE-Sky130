@@ -2,6 +2,7 @@
 # Table of Contents 
  - [Day1 -Inception of open-source EDA,OpenLANE and Sky130PDK ](#Inception-of-open-source-EDA,OpenLANE-and-Sky130PDK)<br>
  - [Day2 -Good floorplan vs Bad floorplan and Introduction to library cells](#Good-floorplan-vs-Bad-floorplan-and-Introduction-to-library-cells)<br>
+  - [Day3 -Design Library Cell using Magic Layout & Ngspice Characterization](#Design-Library-Cell-using-Magic-Layout-&-Ngspice-Characterization)<br>
 
  # Day 1
  # Inception of open-source EDA,OpenLANE and Sky130PDK
@@ -505,7 +506,15 @@ GUNA is a open software used for characterization.All the above steps are fed in
 
  ![timingthreshold](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/c606b58c-2aa9-40e8-aada-8d9c992abf23)
 
-```
+ **Propagation Delay** 
+ 
+ Propagation delay is the time required for a signal to propagate through a gate or net.Hence if it is cell, you can call it as “Gate or Cell Delay” or if it is net you can call it as “Net Delay”.Propagation delay of a gate or cell is the time it takes for a signal at the input pin to affect the output signal at output pin.For any gate propagation delay is measured between 50% of input transition to the corresponding 50% of output transition.
+
+ **Transistion Delay**
+
+ Transition delay or slew is defined as the time taken by signal to rise from 10 %( 20%) to the 90 %( 80%) of its maximum value. This is known as “rise time”.Similarly “fall time” can be defined as the time taken by a signal to fall from 90 %( 80%) to the 10 %( 20%) of its maximum value.Transition is the time it takes for the pin to change state.
+
+ ```
 
 Propagation delay = time(out_thr) - time(in_thr)
 
@@ -514,6 +523,14 @@ Rise transition time = time(slew_high_rise_thr) - time (slew_low_rise_thr)
 Low transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
 
 ```
+</details>
 
+# Day 3
+# Design Library Cell using Magic Layout & Ngspice Characterization
+
+<details>
+ <summary>
+  CMOS Inverter Ngspice Simulations
+ </summary>
 </details>
  
