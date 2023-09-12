@@ -420,9 +420,14 @@ run_floorplanning
 
 ![runfloorplan](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/21082ce8-16a5-45d7-8645-b053d6d305a3)
 
+ </details>
 
+ <details>
+  <summary>
+    Library Binding and Placement
+  </summary>
 
-
+  **Netlist Binding and initial Design**
 
   
  </details>
