@@ -473,9 +473,32 @@ run_placement
 
 It has three steps:
 + Inputs for Cell Design Flow
-+ Circuit Design
++ Design Steps
 + Outputs
 
 **Inputs** - are from Process Design Kits(PDKs): DRV &LVS rules,spice models,library & user defined specifications.
- </details>
+
+**Design Steps** - Circuit Design, Layout Design, Characterization
+
+**Outputs** - CDL(Circuit Description Language),GDSII,LEF,Extracted Spice Netlist(.cir)
+
+**Typical Characterization Flow**
+
++ Read in the models and tech files
++ Read extracted spice netlist
++ Recognise behaviour of the cell
++ Read the subcircuits
++ Attach power sources
++ Apply stimulus to characterization setup
++ Provide necessary output capacitance loads
++ Provide necessary simulation commands
+
+GUNA is a open software used for characterization.All the above steps are fed into GUNA which generates timing,noise,power.libs,functions.
+</details>
+
+<details>
+ <summary>
+  General Timing Characterization Parameters
+ </summary>
+</details>
  
