@@ -384,7 +384,6 @@ The very first step in chip design is floorplanning, in which the width and heig
 
 **De-coupling Capacitors**
 
-
   
  </details>
  
