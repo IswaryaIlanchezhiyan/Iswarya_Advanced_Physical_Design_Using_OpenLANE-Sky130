@@ -439,8 +439,43 @@ run_floorplanning
 
 ![optimize placement](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/4597080d-fda0-4325-94e5-e7c17f8f5c05)
 
+**Need for Library Characterization**
+
+Knowing the logical function of a cell is not sufficient to build functional electrical circuits. More aspects need to be considered; for example, the speed of a single cell will influence the speed of the full circuit, just as the power used by a single cell can influence the total power. Further, the speed as well as the power might be influenced by the output load. Standard-cell characterization aims at collecting this sort of information.
+
+Library characterization is a process of simulating a standard cell using analog simulators to extract input load, speed, and power data in a way that the downstream tools can process it all. This can be done via a specific analog simulator whose output is used to generate the characterization data, or by using a library characterization tool.
+
+**Congestion aware placement using Replace**
+
+**Legalization** - During legalization, the tool moves the cells to legal locations on the placement grid and eliminate any overlap between cells. These small changes to cell location cause the lengths of the wire connections to change, possibly causing new timing violations. Such violations can often be fixed by incremental optimization, for example: by resizing the driving cells.
 
 
-  
+**Global Placement** - There is no legalization.
+
+**Detailed Placement** -  There is legalization.
+
+```
+
+run_placement
+
+```
+
+![run_placement](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/2d335fc5-6c94-42fc-aabe-5b23615f7ba6)
+
+ </details>
+
+ <details>
+  <summary>
+   Cell Design and Characterization Flows
+  </summary>
+
+  **Cell Design Flow**
+
+It has three steps:
++ Inputs for Cell Design Flow
++ Circuit Design
++ Outputs
+
+**Inputs** - are from Process Design Kits(PDKs): DRV &LVS rules,spice models,library & user defined specifications.
  </details>
  
