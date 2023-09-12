@@ -493,12 +493,27 @@ It has three steps:
 + Provide necessary output capacitance loads
 + Provide necessary simulation commands
 
-GUNA is a open software used for characterization.All the above steps are fed into GUNA which generates timing,noise,power.libs,functions.
+GUNA is a open software used for characterization.All the above steps are fed into GUNA which generates timing,noise,power.libs,function.
 </details>
 
 <details>
  <summary>
   General Timing Characterization Parameters
  </summary>
+
+ **Timing Threshold Definitions**
+
+ ![timingthreshold](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/c606b58c-2aa9-40e8-aada-8d9c992abf23)
+
+```
+
+Propagation delay = time(out_thr) - time(in_thr)
+
+Rise transition time = time(slew_high_rise_thr) - time (slew_low_rise_thr)
+
+Low transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
+
+```
+
 </details>
  
