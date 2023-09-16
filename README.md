@@ -5,6 +5,8 @@
   - [Day3 -Design Library Cell using Magic Layout & Ngspice Characterization](#Design-Library-Cell-using-Magic-Layout-&-Ngspice-Characterization)<br>
   - [Day4 -Pre-layout timing analysis and importance of good clock tree](#Pre-layout-timing-analysis-and-importance-of-good-clock-tree)<br>
   - [Day5 -Final steps for RTL2GDS using tritonRoute and openSTA](#Final-steps-for-RTL2GDS-using-tritonRoute-and-openSTA)<br>
+    - [References](#References)<br>
+  
 
 
  # Day 1
@@ -757,6 +759,14 @@ Hold time is the minimum amount of time after the clock edge that the data input
    Routing and design rule check (DRC)
  </summary>
 </details>
+
+# References
+
+1. https://www.vsdiat.com
+2. https://github.com/Devipriya1921/Physical_Design_Using_OpenLANE_Sky130
+3. https://github.com/nickson-jose/vsdstdcelldesign/
+4. https://github.com/The-OpenROAD-Project/OpenLane
+   
 
  
  
