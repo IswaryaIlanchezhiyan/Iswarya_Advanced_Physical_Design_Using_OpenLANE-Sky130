@@ -758,6 +758,26 @@ Hold time is the minimum amount of time after the clock edge that the data input
  <summary>
    Routing and design rule check (DRC)
  </summary>
+
+ **Introduction to Maze Routing and Lee's algorithm**
+
+ Routing is the task of finding a set of connections that will wire together with the terminals of different modules on a printed circuit board or VLSI chip. In the simplest case, these connections are made on a single routing layer of metal. Each connection or net connects a source terminal to a destination terminal.
+
+The Maze Routing algorithm represents the routing layer as a grid, where each gridpoint can contain connections to adjacent gridpoints. It searches for a shortest-path connection between the source and destination nodes of a connection by performing a search and labeling each gridpoint with its distance from the source. This expansion phase will eventually reach the destination node if a connection is possible. A second traceback phase then forms the connection by following any path with decreasing labels. This algorithm is guaranteed to find the shortest path between a source and destination for a given connection. However, when multiple connections are made one connection may block other connections.
+
+Lee’s Algorithm performs a breadth-first search traversal of the grid, starting from the source cell and expanding outward in all possible directions. Each cell is marked with a distance value indicating the number of grid cells traversed to reach that point. This process continues until the destination cell is reached or all possible paths have been explored.
+
+During the traversal, Lee’s Algorithm keeps track of the parent cell for each visited cell, forming a tree-like structure. This information enables efficient backtracking from the destination cell to the source cell, effectively identifying the shortest path. By considering the distances and parent cells, the routing solution obtained through Lee’s Algorithm ensures minimal wirelength and reduced congestion.
+
+**Benefits of Lee’s Algorithm**
+
+Lee’s Algorithm brings several advantages to VLSI routing:
+
++ The algorithm guarantees finding the shortest path between source and destination points efficiently, making it suitable for large-scale integrated circuits.
++ By minimizing the distance between interconnected components, Lee’s Algorithm helps reduce wirelength, leading to improved signal propagation and reduced delays.
++ The algorithm’s adaptability allows designers to incorporate additional constraints, such as avoiding specific areas or optimizing for power consumption, into the routing process.
+
+
 </details>
 
 # References
