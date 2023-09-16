@@ -769,6 +769,9 @@ Lee’s Algorithm performs a breadth-first search traversal of the grid, startin
 
 During the traversal, Lee’s Algorithm keeps track of the parent cell for each visited cell, forming a tree-like structure. This information enables efficient backtracking from the destination cell to the source cell, effectively identifying the shortest path. By considering the distances and parent cells, the routing solution obtained through Lee’s Algorithm ensures minimal wirelength and reduced congestion.
 
+![maze](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/2f2dbcc2-37f1-4711-aa17-f68b07017a90)
+
+
 **Benefits of Lee’s Algorithm**
 
 Lee’s Algorithm brings several advantages to VLSI routing:
@@ -777,7 +780,30 @@ Lee’s Algorithm brings several advantages to VLSI routing:
 + By minimizing the distance between interconnected components, Lee’s Algorithm helps reduce wirelength, leading to improved signal propagation and reduced delays.
 + The algorithm’s adaptability allows designers to incorporate additional constraints, such as avoiding specific areas or optimizing for power consumption, into the routing process.
 
+**Design Rule Check(DRC)**
 
+Design Rule Checking (DRC) verifies as to whether a specific design meets the constraints imposed by the process technology to be used for its manufacturing. DRC checking is an essential part of the physical design flow and ensures the design meets manufacturing requirements and will not result in a chip failure. The process technology rules are provided by process engineers and/or fabrication facility.
+
+**Types of Design Rule Checking**
+
+Each process technology will have its own set of rules. The number of DRC rules and complexity of rules increases as the manufacturing technology shrinks at advanced nodes.
+
+Here are some basic and common types of DRC rules
+
++ Minimum width
++ Minimum spacing 
++ Minimum area
++ Wide metal jog
++ Misaligned via wire
++ Special notch spacing
++ End of line spacing
+
+</details>
+
+<details>
+ <summary>
+   Power Distribution Network and routing
+ </summary>
 </details>
 
 # References
