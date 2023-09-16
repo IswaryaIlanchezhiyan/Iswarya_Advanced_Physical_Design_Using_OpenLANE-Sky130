@@ -687,7 +687,52 @@ Jitter is the timing variations of a set of signal edges from their ideal values
  <summary>
   Clock tree synthesis TritonCTS and signal Integrity 
  </summary>
+
+ **Clock tree routing and buffering using H-Tree algorithm**
+
+ Clocks are used to synchronize data communication. Before clock tree synthesis, clock path behaves as ideal, where there is equal delay from clock source to sink.
  
+The concept of clock tree synthesis (CTS) is the automatic insertion of buffers/inverters along the clock paths of the ASIC design to balance the clock delay to all clock inputs. Basically, clock gets evenly distributed throughout the design across all the sequential elements.
+
+There are number of algorithms to build the clock tree:
+
++ H Tree
++ Clock Mesh
++ Spine
++ Fish bone
+
+In recent times, in order to compete the clock tree balancing we use H tree algorithm. Let’s go into the details of H Tree algorithm.
+
+**Algorithm steps for the H-Tree**
+
++ Find out all the flops present.
++ Find out the center of all the flops.
++ Trace clock port to center point.
++ Now divide the core into two parts, trace both the parts and reach to each center.
++ Then from this center, again divide the area into two and again trace till center at both the end.
++ Repeat this algorithm till the time we reach the flop clock pin.
+
+**Crosstalk**
+
+Crosstalk is the unwanted coupling of signals between adjacent wires or devices in a VLSI layout. It can occur due to capacitive, inductive, or resistive effects. Crosstalk can cause signal distortion, delay, or switching errors, especially in high-speed or low-voltage circuits.
+
+Every electrical signal, whether electrical, magnetic, or moving, is connected to a fluctuating field. When these fields intersect, their signals interfere with one another. Crosstalk is caused by electromagnetic interference. If two wires close to each other carry different signals, the currents in them will generate magnetic fields that will induce a lesser signal in the adjoining wire.
+
+Electrical impedance in the return path provides shared impedance coupling between the signals in electrical circuits that share a common signal return channel, resulting in crosstalk.
+
+![crosstalk](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/104dfa53-a078-4de6-b261-e06a6a277b98)
+
+**Clock Net Shielding**
+
+Shielding is required to protect the critical net from the outer environment. Shielding is an effective and very common technique to reduce crosstalk noise as well as delay uncertainty at the cost of the increased routing area. . In the lower technology nodes, Due to capacitive and inductive coupling effects, inserting a shield line is necessary to keep the signal integrity efficiently. 
+
+![clock net shielding](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/ce2b06f1-4aa8-4628-bc3d-41250cbf84b8)
+
+</details>
+<details>
+ <summary>
+   Timing analysis with real clocks using openSTA
+ </summary>
 </details>
  
  
