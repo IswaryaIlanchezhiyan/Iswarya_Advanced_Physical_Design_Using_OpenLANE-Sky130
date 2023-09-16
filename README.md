@@ -532,5 +532,48 @@ Low transition time = time(slew_high_fall_thr) - time (slew_low_fall_thr)
  <summary>
   CMOS Inverter Ngspice Simulations
  </summary>
+
+ **IO Placer Revision**
+
+ OpenLANE allows users to make changes to environment variables on the fly. For instance, if we wish to change the pin placement from equidistant to some other style of placement we may do the following in the openLANE flow:
+
+ ```
+
+set ::env(FP_IO_MODE) 2
+
+```
+
+**SPICE Deck creation for CMOS Inverter**
+
+SPICE Deck includes the following steps:
+
++ Component Connectivity
++ Component Values
++ Nodes Identification
++ Naming Nodes
++ Model Description
++ Netlist Description
+
+**SPICE Deck Simulation for CMOS Inverter**
+
+![spice waveform](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/ee68b02e-d674-4f57-a350-64ab244acd20)
+
+**Switching Threshold Vm**
+
+The switching threshold, VM, is defined as the point where Vin = Vout. Its value can be obtained graphically from the intersection of the VTC with the line given by Vin = Vout. In this region, both PMOS and NMOS are always saturated, since VDS = VGS.
+
+![threshold](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/b293ad12-2646-4321-8c92-eac07038cd99)
+
+**Static and Dynamic Simulation of CMOS Inverter**
+
+![static cmos](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/944f03a7-7afc-465c-b2bf-eaf5e9dc29f5)
+
+**Lab steps to git clone vsdstdcelldesign**
+
+</details>
+<details>
+ <summary>
+   Inception of Layout A CMOS fabrication process
+ </summary>
 </details>
  
