@@ -659,9 +659,14 @@ or
 
 Gate delay =function of (input transition (slew) time, Cload).
 
-![Uploading delay tables.png…]()
+![delay tables](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/b83578a9-7976-4f18-b815-dc5ff527ac51)
 
+</details>
 
+<details>
+ <summary>
+   Timing Analysis with ideal clocks using OpenSTA
+ </summary>
 </details>
  
  
