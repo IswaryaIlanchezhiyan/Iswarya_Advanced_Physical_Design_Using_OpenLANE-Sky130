@@ -3,6 +3,8 @@
  - [Day1 -Inception of open-source EDA,OpenLANE and Sky130PDK ](#Inception-of-open-source-EDA,OpenLANE-and-Sky130PDK)<br>
  - [Day2 -Good floorplan vs Bad floorplan and Introduction to library cells](#Good-floorplan-vs-Bad-floorplan-and-Introduction-to-library-cells)<br>
   - [Day3 -Design Library Cell using Magic Layout & Ngspice Characterization](#Design-Library-Cell-using-Magic-Layout-&-Ngspice-Characterization)<br>
+  - [Day4 -Pre-layout timing analysis and importance of good clock tree](#Pre-layout-timing-analysis-and-importance-of-good-clock-tree)<br>
+
 
  # Day 1
  # Inception of open-source EDA,OpenLANE and Sky130PDK
@@ -610,8 +612,32 @@ The switching threshold, VM, is defined as the point where Vin = Vout. Its value
 
 ![step8](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/6b8a27f9-7fd9-4da1-9fea-90d4dc7297c3)
 
+**Steps to create std cell layout and extract spice netlist**
 
+The Magic layout of a CMOS inverter will be used so as to intergate the inverter with the picorv32a design. To do this, inverter magic file is sourced from vsdstdcelldesign by cloning it 
 
+```
+
+git clone https://github.com/nickson-jose/vsdstdcelldesign
+
+```
 
 </details>
+
+<details>
+ <summary>
+   Sky130 Tech File Labs
+ </summary>
+
+ </details>
+
+ # Day 4
+ # Pre-layout timing analysis and importance of good clock tree
+
+<details>
+ <summary>
+   Timing Modelling using Delay Tables
+ </summary>
+</details>
+ 
  
