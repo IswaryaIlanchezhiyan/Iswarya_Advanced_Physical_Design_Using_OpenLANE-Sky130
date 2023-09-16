@@ -575,5 +575,43 @@ The switching threshold, VM, is defined as the point where Vin = Vout. Its value
  <summary>
    Inception of Layout A CMOS fabrication process
  </summary>
+
+ **16-mask CMOS Process**
+
+**Selecting a substrate** - Secting the body/substrate material.
+
+ ![step1](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/00f3e5a4-4e3a-47aa-968f-6d9196911e85)
+
+**Creating active regions for Transistors** -  Isolation between active region pockets by SiO2 and Si3N4 deposition followed by photolithography and etching.
+
+![step2](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/3b0b3fb0-d7c4-4b76-a61c-aeaca06b8bf9)
+
+**N-well and P-well formation** - Ion implanation by Boron for P-well and by Phosphorous for N-well formation.
+
+![step3](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/d1a9d532-e55d-403c-8e54-2222f7733624)
+
+**Formation of Gate** - NMOS and PMOS gates formed by photolithography techniques.
+
+![step4](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/c26d6b4a-3e4a-4965-94f4-13063c3cab54)
+
+**Lightly Doped Drain Formation** - LDD formed to prevent hot electron effect.
+
+![step5](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/1a79bbbf-e6fd-467e-a6a1-c9786106bd82)
+
+**Source and Drain Formation** - Screen oxide added to avoid channelling during implants followed by Aresenic implantation and annealing.
+
+![step6](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/8279c48b-2444-497c-ad1f-a9e0cda41f5f)
+
+**Local Interconnect Formation** - Removal of screen oxide by HF etching. Deposition of Ti for low resistant contacts.
+
+![step7](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/300e152d-6954-4c56-8ac2-8251c4e27cf3)
+
+**Higher Level Metal Formation** - CMP for planarization followed by TiN and Tungsten deposition. Top SiN layer for chip protection.
+
+![step8](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/6b8a27f9-7fd9-4da1-9fea-90d4dc7297c3)
+
+
+
+
 </details>
  
