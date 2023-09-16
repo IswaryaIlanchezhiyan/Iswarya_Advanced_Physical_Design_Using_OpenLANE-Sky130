@@ -4,6 +4,7 @@
  - [Day2 -Good floorplan vs Bad floorplan and Introduction to library cells](#Good-floorplan-vs-Bad-floorplan-and-Introduction-to-library-cells)<br>
   - [Day3 -Design Library Cell using Magic Layout & Ngspice Characterization](#Design-Library-Cell-using-Magic-Layout-&-Ngspice-Characterization)<br>
   - [Day4 -Pre-layout timing analysis and importance of good clock tree](#Pre-layout-timing-analysis-and-importance-of-good-clock-tree)<br>
+  - [Day5 -Final steps for RTL2GDS using tritonRoute and openSTA](#Final-steps-for-RTL2GDS-using-tritonRoute-and-openSTA)<br>
 
 
  # Day 1
@@ -733,6 +734,29 @@ Shielding is required to protect the critical net from the outer environment. Sh
  <summary>
    Timing analysis with real clocks using openSTA
  </summary>
+
+ **Setup Timing Analysis using Real Clocks**
+
+Setup time is the minimum amount of time before the clock edge that the data input must be stable
+ 
+ ![setup real](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/0053c9a1-62fa-4b34-9e6d-e572535405f8)
+
+ **Hold Time Analysis using Real Clocks**
+
+Hold time is the minimum amount of time after the clock edge that the data input must remain stable
+
+![hold real](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/41406b24-d0fb-4b0e-844c-82806b9bfa5b)
+
 </details>
+
+# Day 5
+#  Final steps for RTL2GDS using tritonRoute and openSTA
+
+<details>
+ <summary>
+   Routing and design rule check (DRC)
+ </summary>
+</details>
+
  
  
