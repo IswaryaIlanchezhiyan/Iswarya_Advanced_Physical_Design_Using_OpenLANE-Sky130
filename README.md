@@ -807,8 +807,16 @@ Here are some basic and common types of DRC rules
 
  **Routing using Triton Route**
 
- 
-</details>
+ Detailed routing is a dead-or-alive critical element in design automation tooling for advanced node enablement. However, very few works address detailed routing in the recent open literature, particularly in the context of modern industrial designs and a complete, end-to-end flow. The ISPD-2018 Initial Detailed Routing Contest addressed this gap for modern industrial designs, using a realistic design rules set. In this work, we present TritonRoute, a detailed router capable of delivering a DRC-clean routing solution. The key contributions of TritonRoute include an in-memory router database, along with an end-to-end detailed routing scheme that is capable of comprehending connectivity and design rule constraints, with every key detail revealed by a code release under a permissive open source license. We evaluate our router using the official ISPD-2018 benchmark suite and show that TritonRoute achieves an unprecedented solution quality – improved wirelength and via count, and an extremely low level of design rule violations (DRCs). Compared to the known best detailed routing solutions from all published academic detailed routers, TritonRoute improves wirelength by up to 0.8% (avg. 0.4%), via count by up to 16.1% (avg. 9.3%), and DRCs by up to 100% (avg. 92.0%).
+
+ ![triton route](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/c61462b2-b78e-402f-99d2-cd2ca586a5d4)
+
+ </details>
+ <details>
+  <summary>
+     TritonRoute Features
+  </summary>
+ </details>
 
 # References
 
