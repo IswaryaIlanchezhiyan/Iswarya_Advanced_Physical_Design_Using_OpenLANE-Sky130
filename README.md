@@ -804,6 +804,10 @@ Here are some basic and common types of DRC rules
  <summary>
    Power Distribution Network and routing
  </summary>
+
+ **Routing using Triton Route**
+
+ 
 </details>
 
 # References
