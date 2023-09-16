@@ -816,6 +816,13 @@ Here are some basic and common types of DRC rules
   <summary>
      TritonRoute Features
   </summary>
+
+  **Preprocessed Route Guide**
+
+  ![preprocessed route](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/32afb4e3-3946-4cab-8569-26b2e18a0b7e)
+
+  
+
  </details>
 
 # References
