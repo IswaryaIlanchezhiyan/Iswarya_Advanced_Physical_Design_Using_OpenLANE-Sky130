@@ -667,6 +667,27 @@ Gate delay =function of (input transition (slew) time, Cload).
  <summary>
    Timing Analysis with ideal clocks using OpenSTA
  </summary>
+
+**Setup Timing Analysis**
+
+Setup time is the minimum amount of time the data signal should be held steady before the clock edge so that the data can be reliably sampled. Think of the setup time constraint as a race between the data signal and the clock.
+
+![setup time analysis](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/ed57e250-bca9-4267-a271-1d461a33ff55)
+
+**Clock Jitter**
+
+Jitter is the timing variations of a set of signal edges from their ideal values. Jitters in clock signals are typically caused by noise or other disturbances in the system. Contributing factors include thermal noise, power supply variations, loading conditions, device noise, and interference coupled from nearby circuits.
+
+ Clock jitter is the deviation of a clock edge from its ideal position in time. Simply speaking, it is the inability of a clock source to produce a clock with clean edges. As the clock edge can arrive within a range, the difference between two successive clock edges will determine the instantaneous period for that cycle. So, clock jitter is of importance while talking about timing analysis. There are many causes of jitter including PLL loop noise, power supply ripples, thermal noise, crosstalk between signals etc.
+
+ ![clock jitter](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/25f286e1-e8e3-4f46-83e7-e28e6f4fbf73)
+ 
+</details>
+<details>
+ <summary>
+  Clock tree synthesis TritonCTS and signal Integrity 
+ </summary>
+ 
 </details>
  
  
