@@ -821,7 +821,53 @@ Here are some basic and common types of DRC rules
 
   ![preprocessed route](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/32afb4e3-3946-4cab-8569-26b2e18a0b7e)
 
-  
+  **Requirements**
+  + should have unit width.
+  + should be in preferred direction.
+
+**Splitting**
+
+A guide with width (orthogonal to the preferred direction) greater than unit width is split into multiple unit-width guides.
+
+**Merging**
+
+Touching guides (touching edge orthogonal to the preferred routing direction) are merged.
+
+**Bridging**
+
+Touching guides (touching edge parallel to the preferred routing direction) are bridged with additional upper (default) or lower layer guides. After bridging, inter-guide connectivity does not rely on routing topologies with non-preferred direction routing.
+
+**Inter-guide Connectivity**
+
+All unconnected terminals of a net can be traced through connected route guides. Two guides are connected if (i) they are on the same metal layer with touching edges, or (ii) they are on neighboring metal layers with a nonzero vertically overlapped area. Each unconnected terminal (i.e., pin of a standard-cell instance or an IO port) should have its pin shape overlapped by a route guide.
+
+**Intra-Layer Parallel Routing**
+
+Since route guides on the same metal layer are aligned and have unit width, routing realization can be executed in parallel as long as two route guides do not overlap (subject to design rules). We partition each metal layer into nonoverlapping, unit-width panels such that each panel runs parallel to the preferred routing direction. Each route guide is assigned to (exactly) one panel. Routing realization of all route guides within a panel is subject to the limits of shared routing resources, i.e., track availability and various design rules. By contrast, routing realizations in different panels are almost independent, except for design rule constraints, i.e., minimum spacing. Thus, intra-layer routing can be performed in parallel, with respect to panels. In our implementation, for one metal layer, we route all even-index panels in parallel, and then route all odd-index panels in parallel so that design rules violations along panel boundaries can be optimized.
+
+**Inter-Layer Sequential Routing**
+
+We assign routing segments and vias layer by layer, in a sequential manner, from the bottom metal layer to the top layer. Only after we have assigned all routing segments and vias for all panels on layer l, do we proceed to the next (upper) metal layer l+1. 
+
+In our implementation, vias between a lower layer and an upper layer are assigned when we perform the upper-layer panel routing. We handle both intra-guide and inter-guide connectivity in our MILP-based panel routing. Note that in this flow, we do not consider pre-routed power-ground (PG) mesh. Also, since we do not perform iterated inter-panel and interlayer improvements, we currently do not consider routing detours to help achieve DRC convergence.
+
+![inter intra](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/a28c8de5-7061-4175-94be-a0b938fce468)
+
+# Handling Connectivity
+
+**Access Point**
+
+An access point (AP) is an on-grid point on the metal layer of the route guide, and is used to connect to lower-layer segments, upper-layer segments, pins or IO ports. An access point may also contain certain detailed routing segments and vias as needed.
+
+ If access points are used for inter-guide connectivity to lower-layer or upper-layer guides, we generate all on-grid access points within the guides' overlapped area. If access points are used for pins or IO ports, we generate all on-grid access points along the preferred routing direction up to 15 tracks apart. We note that only access points with unique routing patterns in the preferred direction are generated. We discard all access points using non-preferred routing except for pin access. We do not generate off-grid access points in our implementation. However, our flow supports the co-existence of on-grid and off-grid access points, including off-grid routing patterns.
+
+**Access Point Cluster**
+
+An access point cluster (APC) is the union of all access points derived from the same lower-layer segment, upper-layer guide, a pin or an IO port.
+
+**Routing Toping Algorithm**
+
+![algorithm](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/5419d784-1b79-4995-95cd-be6c5fcc2ce4)
 
  </details>
 
