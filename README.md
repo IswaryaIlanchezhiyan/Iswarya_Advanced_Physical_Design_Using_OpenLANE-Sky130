@@ -638,6 +638,30 @@ git clone https://github.com/nickson-jose/vsdstdcelldesign
  <summary>
    Timing Modelling using Delay Tables
  </summary>
+
+ **Introduction to Delay Tables**
+
+ We encounter several types of delays in ASIC design. They are as follows:
+
++ Gate delay or Intrinsic delay
++ Net delay or Interconnect delay or Wire delay or Extrinsic delay or Flight time
++ Transition or Slew
++ Propagation delay
++ Contamination delay
+
+Wire delays or extrinsic delays are calculated using output drive strength, input capacitance and wire load models. Other delays are intrinsic properties of each and every gate.
+
+Transistors within a gate take a finite time to switch. This means that a change on the input of a gate takes a finite time to cause a change on the output. 
+
+Gate delay =function of (input transition (slew) time, Cnet+Cpin).
+
+or
+
+Gate delay =function of (input transition (slew) time, Cload).
+
+![Uploading delay tables.png…]()
+
+
 </details>
  
  
