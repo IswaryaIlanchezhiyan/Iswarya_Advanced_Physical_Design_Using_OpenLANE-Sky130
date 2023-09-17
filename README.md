@@ -878,18 +878,72 @@ Generate the lef file using below command:
 
 ```
 
-lef write <name>
+lef write sky130_ishu
 
 ```
 
+In terminal
 
+```
+cd home/iswarya//OpenLane/vsdstdcelldesign
+gvim sky130_ishu.lef
 
+```
 
+![lef file](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/807f4a41-df79-4b02-9d79-3eff647508b0)
 
+**Introduction to timing libs and steps to include new cell in synthesis**
 
+Copy sky130_ishu.lef,sky130_fd_sc_hd__fast.lib, sky130_fd_sc_hd__slow.lib and sky130_fd_sc_hd__typical.lib
+files from vsdstdcelldesign folder and paste it in **home/iswarya/OpenLane/designs/picorv32a/src**.
 
+Then edit config.json file
 
- **Introduction to Delay Tables**
+```
+
+{
+    "DESIGN_NAME": "picorv32",
+    "VERILOG_FILES": "dir::src/picorv32a.v",
+    "CLOCK_PORT": "clk",
+    "CLOCK_NET": "clk",
+    "GLB_RESIZER_TIMING_OPTIMIZATIONS": true,
+    "RUN_HEURISTIC_DIODE_INSERTION": true,
+    "DIODE_ON_PORTS": "in",
+    "GPL_CELL_PADDING": 2,
+    "DPL_CELL_PADDING": 2,
+    "CLOCK_PERIOD": 24,
+    "FP_CORE_UTIL": 35,
+    "PL_RANDOM_GLB_PLACEMENT": 1,
+    "PL_TARGET_DENSITY": 0.5,
+    "FP_SIZING": "relative",
+    "LIB_SYNTH":"dir::src/sky130_fd_sc_hd__typical.lib",
+    "LIB_FASTEST":"dir::src/sky130_fd_sc_hd__fast.lib",
+    "LIB_SLOWEST":"dir::src/sky130_fd_sc_hd__slow.lib",
+    "LIB_TYPICAL":"dir::src/sky130_fd_sc_hd__typical.lib",
+    "TEST_EXTERNAL_GLOB":"dir::/src/*",
+    "SYNTH_DRIVING_CELL":"sky130_vsdinv",
+    "MAX_FANOUT_CONSTRAINT": 4,
+    "pdk::sky130*": {
+        "MAX_FANOUT_CONSTRAINT": 6,
+        "scl::sky130_fd_sc_ms": {
+            "FP_CORE_UTIL": 30
+        }
+    }
+}
+
+```
+
+In terminal
+
+```
+
+cd home/iswarya/OpenLane/designs/picorv32a/runs/RUN_2023.09.17_06.20.00/logs/synthesis
+
+```
+
+![logsynthessi](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/5bc4e2b1-38b2-49d6-80b3-3d883c696313)
+
+**Introduction to Delay Tables**
 
  We encounter several types of delays in ASIC design. They are as follows:
 
