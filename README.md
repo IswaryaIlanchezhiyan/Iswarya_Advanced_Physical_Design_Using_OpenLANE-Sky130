@@ -1141,6 +1141,15 @@ report_checks -path_delay min_max -format full_clock_expanded -digits 4
 
 ```
 
+**Setup Slack**
+
+![setup slack](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/93199da9-10f1-4889-8cb0-c79d3f9d8445)
+
+**Hold Slack**
+
+![hold slack](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/961772e5-1de7-4e9e-92d9-bb1061e8778b)
+
+
 </details>
 
 # Day 5
