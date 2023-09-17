@@ -416,11 +416,11 @@ Power Planning calculates  the required number of power pins,Rings and stripes c
 Pin Placement details basically come from the TOP level design where we are having information to place pins according to the interaction with other HMs.
 We need to define edge, layer and location before placing pins.After pin placement, IO Pad placement happens.
 
-**Steps to run Floor paln using OpenLANE**
+**Steps to run Floor plan using OpenLANE**
 
 ```
 
-run_floorplanning
+run_floorplan
 
 ```
 
