@@ -225,7 +225,7 @@ strategy for a given design.
  + OpenLane can sweep different parameters to help with that
  + For each run, OpenLane collects around 35 different design metrics
 
-**OPenLANE Regression**
+**OpenLANE Regression**
 
 + The design exploration utility is, also, used for regression testing
 + We run OpenLane on ~70 designs and compare the results to the best known ones
@@ -425,6 +425,18 @@ run_floorplan
 ```
 
 ![runfloorplan](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/21082ce8-16a5-45d7-8645-b053d6d305a3)
+
+
+To view Floorplan in Magic Layout:
+
+```
+
+cd /home/iswarya/OpenLane/designs/picorv32a/runs/RUN_2023.09.17_06.20.00/results/floorplan
+magic -T /home/iswarya/OpenLane/open_pdks/sky130/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read picorv32.def &
+
+```
+
+![runfloorplan layout](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/df27d6a4-3a9f-4be2-abb9-addb3075adf9)
 
  </details>
 
