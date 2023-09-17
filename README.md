@@ -211,7 +211,6 @@ Sign off includes
 
 **Synthesis Exploration**
 
-
 + Yosys is used for RTL synthesis
 + ABC is used for logic synthesis and technology mapping
 
@@ -437,6 +436,14 @@ magic -T /home/iswarya/OpenLane/open_pdks/sky130/sky130A/libs.tech/magic/sky130A
 ```
 
 ![runfloorplan layout](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/df27d6a4-3a9f-4be2-abb9-addb3075adf9)
+
+**Steps to run Placement using OpenLANE**
+
+```
+
+run_placement
+
+```
 
  </details>
 
