@@ -662,7 +662,7 @@ The sky130_inv.mag file can then be invoked in Magic very easily:
 ```
 
 cd /home/iswarya/OpenLane/vsdstdcelldesign
-magic -T sky130A.tech sky130_inv.mag &
+magic -T /home/iswarya/OpenLane/open_pdks/sky130/sky130A/libs.tech/magic/sky130A.tech sky130_inv.mag & 
 
 ```
 
