@@ -871,6 +871,35 @@ An access point cluster (APC) is the union of all access points derived from the
 
  </details>
 
+ <details>
+  <summary>
+    VLSI OPenLANE Interactive flow
+  </summary>
+
+  ```
+
+
+cd OpenLane/ 
+make mount 
+
+./flow.tcl -interactive
+package require openlane 0.9
+prep -design picorv32a
+run_synthesis
+run_floorplan
+run_placement
+run_cts
+run_routing
+run_magic
+run_magic_spice_export
+run_magic_drc
+run_lvs
+run_magic_antenna_check
+
+```
+
+ </details>
+
 # References
 
 1. https://www.vsdiat.com
