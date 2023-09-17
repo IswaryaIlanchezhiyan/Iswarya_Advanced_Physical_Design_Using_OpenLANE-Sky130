@@ -997,7 +997,27 @@ Jitter is the timing variations of a set of signal edges from their ideal values
  Clock jitter is the deviation of a clock edge from its ideal position in time. Simply speaking, it is the inability of a clock source to produce a clock with clean edges. As the clock edge can arrive within a range, the difference between two successive clock edges will determine the instantaneous period for that cycle. So, clock jitter is of importance while talking about timing analysis. There are many causes of jitter including PLL loop noise, power supply ripples, thermal noise, crosstalk between signals etc.
 
  ![clock jitter](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/25f286e1-e8e3-4f46-83e7-e28e6f4fbf73)
- 
+
+ **Post-Synthesis Timing Analysis using OpenSTA**
+
+ Timing analysis is carried out outside the openLANE flow using OpenSTA tool. Invoke OpenSTA outside the openLANE flow as follows:
+
+ ```
+
+sta pre_sta.conf
+
+```
+
+Copied my_base.sdc file from OpenLane/vsdstdcelldesign/extras into :
+
+```
+
+cd home/iswarya/OpenLane/designs/picorv32a/src/
+gvim my_base.sdc
+
+```
+![sdcfile](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/a3c1112b-028f-4fc7-a808-4142a28ba981)
+
 </details>
 <details>
  <summary>
