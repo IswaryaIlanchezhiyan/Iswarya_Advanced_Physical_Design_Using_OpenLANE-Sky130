@@ -975,9 +975,17 @@ run_floorplan
 run_placement
 
 ```
- 
 
-</details>
+In Terminal
+
+```
+
+cd home/iswarya//OpenLane/designs/picorv32a/runs/RUN_2023.09.17_14.20.42/results/placement
+magic -T /home/iswarya/OpenLane/open_pdks/sky130/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read picorv32.def &
+
+```
+ 
+ </details>
 
 <details>
  <summary>
