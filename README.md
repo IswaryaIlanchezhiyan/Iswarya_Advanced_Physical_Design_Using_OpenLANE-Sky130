@@ -640,7 +640,14 @@ The switching threshold, VM, is defined as the point where Vin = Vout. Its value
 
 ![step8](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/6b8a27f9-7fd9-4da1-9fea-90d4dc7297c3)
 
-**Lab steps to git clone vsdstdcelldesign**
+</details>
+
+<details>
+ <summary>
+   Sky130 Tech File Labs
+ </summary>
+
+ **Lab steps to git clone vsdstdcelldesign**
 
 The Magic layout of a CMOS inverter will be used so as to intergate the inverter with the picorv32a design. To do this, inverter magic file is sourced from vsdstdcelldesign by cloning it within the OpenLane directory as follows:
 
@@ -754,13 +761,6 @@ Cell Rise Delay : 2.21701 - 2.14989 = 0.06689ns/66.89ps
 Cell Fall Delay : 4.07816 - 4.05011 = 0.02805ns/28.05ps
 
 ```
-
-</details>
-
-<details>
- <summary>
-   Sky130 Tech File Labs
- </summary>
 
  </details>
 
