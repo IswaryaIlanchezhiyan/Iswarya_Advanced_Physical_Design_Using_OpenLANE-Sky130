@@ -843,6 +843,48 @@ gvim tracks.info
 
 ![gridinfo](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/b1ce1102-ac16-4367-b3d1-0a0418ceff01)
 
+In tkcon 2.3 main add this command
+
+```
+
+ grid 0.46um 0.34um 0.23um 0.17um
+
+```
+
+![modified grid](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/a87e81fc-04af-4931-8054-0a6358b6905c)
+
+**Steps to convert magic layout to std cell LEF**
+
+Select Edit --> Text change the Text String and select the enable and unselect default
+
+In tkcon 2.3 main define the purpose of each port
+
+```
+
+port A class input
+port A use signal
+
+port Y class output
+port Y use signal
+
+port VPWR class inout
+port VPWR use power
+
+port VGND class inout
+port VPWR use ground
+
+```
+Generate the lef file using below command:
+
+```
+
+lef write <name>
+
+```
+
+
+
+
 
 
 
