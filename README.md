@@ -1064,6 +1064,31 @@ Shielding is required to protect the critical net from the outer environment. Sh
 
 ![clock net shielding](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/ce2b06f1-4aa8-4628-bc3d-41250cbf84b8)
 
+**Lab steps to run CTS using TritonCTS and verify CTS runs**
+
+```
+
+run_cts
+
+```
+
+![run_cts](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/495fb3b9-5111-4e58-9622-5cdd00db7efb)
+
+```
+
+cd home/iswarya/OpenLane/designs/picorv32a/runs/RUN_2023.09.17_13.34.30/logs/synthesis
+gvim 2-sta.log
+
+```
+
+![2-stalog](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/fcd09bfc-1ca1-4252-bbf1-d691acf9ac65)
+
+Worst Slack for Setup ---> 13.45
+
+Worst Slack for Hold ---> 0.16
+
+Both the values are positive so there are no timing violations.
+
 </details>
 <details>
  <summary>
@@ -1081,6 +1106,32 @@ Setup time is the minimum amount of time before the clock edge that the data inp
 Hold time is the minimum amount of time after the clock edge that the data input must remain stable
 
 ![hold real](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/41406b24-d0fb-4b0e-844c-82806b9bfa5b)
+
+**Timing analysis with real clocks**
+
+From now post cts analysis is performed by operoad within the openlane flow
+
+```
+
+openroad
+
+```
+
+![openroad](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/5c90250b-3373-4963-b624-0c50a20d4555)
+
+```
+read_lef /home/iswarya/OpenLane/designs/picorv32a/runs/RUN_2023.09.17_13.34.30/tmp/merged.nom.lef
+read_def /home/iswarya/OpenLane/designs/picorv32a/runs/RUN_2023.09.17_13.34.30/results/cts/picorv32.def 
+write_db pico_cts.db
+read_db pico_cts.db
+read_verilog /home/iswarya/OpenLane/designs/picorv32a/runs/RUN_2023.09.17_13.34.30/results/synthesis/picorv32.v
+link_design picorv32
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+read_sdc /home/iswarya/OpenLane/designs/picorv32a/src/my_base.sdc
+set_propagated_clock (all_clocks)
+report_checks -path_delay min_max -format full_clock_expanded -digits 4
+
+```
 
 </details>
 
