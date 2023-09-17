@@ -445,6 +445,19 @@ run_placement
 
 ```
 
+![run placement](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/90b904c8-e739-4144-81bb-880bcdab6258)
+
+To view Placement in Magic Layout:
+
+```
+
+cd /home/iswarya/OpenLane/designs/picorv32a/runs/RUN_2023.09.17_06.20.00/results/placement
+magic -T /home/iswarya/OpenLane/open_pdks/sky130/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read picorv32.def &
+
+```
+
+![runplacement layout](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/ca5fa906-6f3b-485c-9c84-cba810f58659)
+
  </details>
 
  <details>
@@ -478,14 +491,6 @@ Library characterization is a process of simulating a standard cell using analog
 **Global Placement** - There is no legalization.
 
 **Detailed Placement** -  There is legalization.
-
-```
-
-run_placement
-
-```
-
-![run_placement](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/2d335fc5-6c94-42fc-aabe-5b23615f7ba6)
 
  </details>
 
