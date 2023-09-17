@@ -1210,6 +1210,17 @@ echo $::env(CURRENT_DEF)
 
 ![PDN](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/2fa3e52c-a832-4187-901d-5809a7e8e1e4)
 
+Log File Generation:
+
+```
+
+cd home/iswarya//OpenLane/designs/picorv32a/runs/RUN_2023.09.17_14.20.42/logs/floorplan
+gvim 6-pdn.log
+
+```
+
+![pdnlogfile](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/3a56de9c-fdf1-48ad-9711-b81fc233e117)
+
 
  **Routing using Triton Route**
 
@@ -1274,6 +1285,26 @@ An access point cluster (APC) is the union of all access points derived from the
 **Routing Toping Algorithm**
 
 ![algorithm](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/5419d784-1b79-4995-95cd-be6c5fcc2ce4)
+
+**TritonRoute run for routing**
+
+```
+
+run_routing
+
+```
+
+Log File
+
+```
+
+cd home/iswarya//OpenLane/designs/picorv32a/runs/RUN_2023.09.17_14.20.42/logs/routing
+gvim  14-resizer_design.log
+
+```
+
+![logfilerouting](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/4058f15b-dd5c-42de-a4f1-2e7618be4ca1)
+
 
  </details>
 
