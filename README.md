@@ -873,7 +873,7 @@ An access point cluster (APC) is the union of all access points derived from the
 
  <details>
   <summary>
-    VLSI OPenLANE Interactive flow
+    VLSI OpenLANE Interactive flow
   </summary>
 
   ```
