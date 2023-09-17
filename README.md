@@ -762,6 +762,66 @@ Cell Fall Delay : 4.07816 - 4.05011 = 0.02805ns/28.05ps
 
 ```
 
+**Introduction to Magic tool options and DRC rules**
+
+```
+
+wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+tar xfz drc_tests.tgz
+cd drc_tests
+magic -d XR met3.mag
+
+```
+
+![magicmet3](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/c89b5f3c-a8b6-48e8-b9f9-295e37d67a4c)
+
+Periphery Rules link - https://skywater-pdk.readthedocs.io/en/main/rules/periphery.html#m3
+
+To figure out the errors use the command **drc why** in tkcon 2.3 main.
+
+Magic uses a lot of derived layers. To see these layers we can make a large box area and use following commands to see metal cut
+
+```
+
+cif see VIA2
+
+```
+
+Load the poly file by **load poly.mag** on tkcon 2.3 main
+
+![load poly mag](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/4e0c78aa-cb0a-4486-a2a8-0d44136bc997)
+
+Edit sky130A.tech
+
+```
+
+gvim sky130A.tech
+
+```
+Modify this part of code:
+
+```
+
+spacing npres *nsd 480 touching_illegal \
+	"poly.resistor spacing to N-tap < %d (poly.9)"
+
+```
+
+Modify like this:
+
+```
+
+spacing npres allpolynonres 480 touching_illegal \
+	"poly.resistor spacing to N-tap < %d (poly.9)"
+
+```
+
+In tkcon 2.3 main try this command **drc check**.
+
+**Modified Layout**
+
+![modified layout](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/3d5b60a6-1824-4992-9cae-cffac5bff2b0)
+
  </details>
 
  # Day 4
