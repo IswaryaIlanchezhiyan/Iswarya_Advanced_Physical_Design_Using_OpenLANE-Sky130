@@ -599,27 +599,6 @@ The switching threshold, VM, is defined as the point where Vin = Vout. Its value
 
 ![static cmos](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/944f03a7-7afc-465c-b2bf-eaf5e9dc29f5)
 
-**Lab steps to git clone vsdstdcelldesign**
-
-The Magic layout of a CMOS inverter will be used so as to intergate the inverter with the picorv32a design. To do this, inverter magic file is sourced from vsdstdcelldesign by cloning it within the OpenLane directory as follows:
-
-```
-
-git clone https://github.com/nickson-jose/vsdstdcelldesign
-
-```
-
-The sky130_inv.mag file can then be invoked in Magic very easily:
-
-```
-
-cd /home/iswarya/OpenLane/vsdstdcelldesign
-magic -T sky130A.tech sky130_inv.mag &
-
-```
-
-![vsdstdcell magic](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/e91525ed-ffc6-4f69-bd7a-5a0f42f2fdd1)
-
 </details>
 <details>
  <summary>
@@ -661,13 +640,118 @@ magic -T sky130A.tech sky130_inv.mag &
 
 ![step8](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/6b8a27f9-7fd9-4da1-9fea-90d4dc7297c3)
 
-**Steps to create std cell layout and extract spice netlist**
+**Lab steps to git clone vsdstdcelldesign**
 
-The Magic layout of a CMOS inverter will be used so as to intergate the inverter with the picorv32a design. To do this, inverter magic file is sourced from vsdstdcelldesign by cloning it 
+The Magic layout of a CMOS inverter will be used so as to intergate the inverter with the picorv32a design. To do this, inverter magic file is sourced from vsdstdcelldesign by cloning it within the OpenLane directory as follows:
 
 ```
 
 git clone https://github.com/nickson-jose/vsdstdcelldesign
+
+```
+
+The sky130_inv.mag file can then be invoked in Magic very easily:
+
+```
+
+cd /home/iswarya/OpenLane/vsdstdcelldesign
+magic -T sky130A.tech sky130_inv.mag &
+
+```
+
+![vsdstdcell magic](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/e91525ed-ffc6-4f69-bd7a-5a0f42f2fdd1)
+
+
+**Lab steps to create std cell layout and extract spice netlist**
+
+In tkcon 2.3 Main
+
+```
+
+extract all
+ext2spice cthresh 0 rethresh 0
+ext2spice
+
+```
+
+![extractall](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/3b18ee5e-fcfd-44c3-bfbc-aec569c0d00f)
+
+```
+
+cd /home/iswarya/OpenLane/vsdstdcelldesign
+gvim sky130_inv.spice
+
+```
+Edit the Model File:
+
+```
+
+* SPICE3 file created from sky130_inv.ext - technology: sky130A
+
+.option scale=0.01u
+.include ./libs/pshort.lib
+.include ./libs/nshort.lib
+
+//.subckt sky130_inv A Y VPWR VGND
+M1000 Y A VGND VGND nshort_model.0 w=35 l=23
++  ad=1.44n pd=0.152m as=1.37n ps=0.148m
+M1001 Y A VPWR VPWR pshort_model.0 w=37 l=23
++  ad=1.44n pd=0.152m as=1.52n ps=0.156m
+
+VDD VPWR 0 3.3V
+VSS VGND 0 0V
+Va A VGND PULSE(0V 3.3V 0 0.1ns 0.1ns 2ns 4ns)
+
+C0 A VPWR 0.0774f
+C1 VPWR Y 0.117f
+C2 A Y 0.0754f
+C3 Y VGND 2f
+C4 A VGND 0.45f
+C5 VPWR VGND 0.781f
+//.ends
+
+.tran 1n 20n
+.control
+run
+.endc
+.end
+
+```
+
+To simulate the spice netlist type the following command in the terminal:
+
+```
+
+ngspice sky130_inv.spice
+
+```
+
+To view the Plot Waveform:
+
+```
+
+plot y vs time a
+
+```
+
+![cmos waveform](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/be32632c-59fc-4123-a4c4-9bc57b6d71be)
+
+Characterization of the inverter standard cell depends on Four timing parameters:
+
+Rise Transition: Time taken for the output to rise from 20% to 80% of max value
+
+Fall Transition: Time taken for the output to fall from 80% to 20% of max value
+
+Cell Rise delay: difference in time(50% output rise) to time(50% input fall)
+
+Cell Fall delay: difference in time(50% output fall) to time(50% input rise)
+
+```
+
+Rise Transition : 2.25421 - 2.18636 = 0.006785 ns / 67.85ps
+Fall Transition : 4.09605 - 4.05554 = 0.04051ns/40.51ps
+Cell Rise Delay : 2.21701 - 2.14989 = 0.06689ns/66.89ps
+Cell Fall Delay : 4.07816 - 4.05011 = 0.02805ns/28.05ps
 
 ```
 
