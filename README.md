@@ -601,13 +601,33 @@ The switching threshold, VM, is defined as the point where Vin = Vout. Its value
 
 **Lab steps to git clone vsdstdcelldesign**
 
+The Magic layout of a CMOS inverter will be used so as to intergate the inverter with the picorv32a design. To do this, inverter magic file is sourced from vsdstdcelldesign by cloning it within the OpenLane directory as follows:
+
+```
+
+git clone https://github.com/nickson-jose/vsdstdcelldesign
+
+```
+
+The sky130_inv.mag file can then be invoked in Magic very easily:
+
+```
+
+cd /home/iswarya/OpenLane/vsdstdcelldesign
+magic -T sky130A.tech sky130_inv.mag &
+
+```
+
+![vsdstdcell magic](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/e91525ed-ffc6-4f69-bd7a-5a0f42f2fdd1)
+
 </details>
 <details>
  <summary>
    Inception of Layout A CMOS fabrication process
  </summary>
 
- **16-mask CMOS Process**
+
+ # 16-mask CMOS Process
 
 **Selecting a substrate** - Secting the body/substrate material.
 
