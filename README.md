@@ -832,6 +832,21 @@ In tkcon 2.3 main try this command **drc check**.
    Timing Modelling using Delay Tables
  </summary>
 
+ **Steps to convert grid info to track info**
+
+ ```
+
+cd home/iswarya/OpenLane/open_pdks/sky130/sky130A/libs.tech/openlane/sky130_fd_sc_hd
+gvim tracks.info
+
+```
+
+![gridinfo](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/b1ce1102-ac16-4367-b3d1-0a0418ceff01)
+
+
+
+
+
  **Introduction to Delay Tables**
 
  We encounter several types of delays in ASIC design. They are as follows:
