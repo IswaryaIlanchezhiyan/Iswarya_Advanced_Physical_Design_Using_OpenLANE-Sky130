@@ -819,6 +819,25 @@ spacing npres allpolynonres 480 touching_illegal \
 
 ```
 
+Also,modify this part of code:
+
+```
+
+spacing xhrpoly,uhrpoly,xpc alldiff 480 touching_illegal \
+	"xhrpoly/uhrpoly resistor spacing to diffusion < %d (poly.9)"
+
+```
+
+Modify like this:
+
+```
+
+  spacing xhrpoly,uhrpoly,xpc allpolynonres 480 touching_illegal \
+       "xhrpoly/uhrpoly resistor spacing to diffusion < %d (poly.9)"
+
+```
+
+
 In tkcon 2.3 main try this command **drc check**.
 
 **Modified Layout**
