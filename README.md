@@ -1017,6 +1017,10 @@ run_placement
 
 ```
 
+![sky130_vsdinv](https://github.com/IswaryaIlanchezhiyan/Iswarya_Advanced_Physical_Design_Using_OpenLANE-Sky130/assets/140998760/5e822c9e-35d5-4d60-bc02-4c96992fc06a)
+
+
+
 In Terminal
 
 ```
