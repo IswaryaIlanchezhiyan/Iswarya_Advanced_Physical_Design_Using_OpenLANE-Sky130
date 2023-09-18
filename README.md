@@ -695,9 +695,10 @@ Edit the Model File:
 
 * SPICE3 file created from sky130_inv.ext - technology: sky130A
 
-.option scale=0.01u
 .include ./libs/pshort.lib
 .include ./libs/nshort.lib
+
+.option scale=0.01u
 
 //.subckt sky130_inv A Y VPWR VGND
 M1000 Y A VGND VGND nshort_model.0 w=35 l=23
@@ -709,10 +710,10 @@ VDD VPWR 0 3.3V
 VSS VGND 0 0V
 Va A VGND PULSE(0V 3.3V 0 0.1ns 0.1ns 2ns 4ns)
 
-C0 A VPWR 0.0774f
-C1 VPWR Y 0.117f
-C2 A Y 0.0754f
-C3 Y VGND 2f
+C0 VPWR Y 0.117f
+C1 Y A 0.0754f
+C2 VPWR A 0.0774f
+C3 Y VGND 0.279f
 C4 A VGND 0.45f
 C5 VPWR VGND 0.781f
 //.ends
@@ -722,6 +723,8 @@ C5 VPWR VGND 0.781f
 run
 .endc
 .end
+
+
 
 ```
 
