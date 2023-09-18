@@ -6,7 +6,7 @@
   - [Day4 -Pre-layout timing analysis and importance of good clock tree](#Pre-layout-timing-analysis-and-importance-of-good-clock-tree)<br>
   - [Day5 -Final steps for RTL2GDS using tritonRoute and openSTA](#Final-steps-for-RTL2GDS-using-tritonRoute-and-openSTA)<br>
   - [References](#References)<br>
-  
+
 
 
  # Day 1
