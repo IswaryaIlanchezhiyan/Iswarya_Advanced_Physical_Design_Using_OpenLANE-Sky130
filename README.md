@@ -877,7 +877,7 @@ In tkcon 2.3 main add this command
 
 **Steps to convert magic layout to std cell LEF**
 
-Select Edit --> Text change the Text String and select the enable and unselect default
+Select Edit --> Text change the Text String by double clicking 'S' on I/O Ports and select the enable and unselect default
 
 In tkcon 2.3 main define the purpose of each port
 
@@ -900,7 +900,7 @@ Generate the lef file using below command:
 
 ```
 
-lef write sky130_ishu
+lef write sky130_vsdinv
 
 ```
 
@@ -908,7 +908,7 @@ In terminal
 
 ```
 cd home/iswarya//OpenLane/vsdstdcelldesign
-gvim sky130_ishu.lef
+gvim sky130_vsdinv.lef
 
 ```
 
@@ -993,6 +993,25 @@ Gate delay =function of (input transition (slew) time, Cload).
 
  ```
 
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs
+run_synthesis
+
+```
+
+```
+
+  % echo $::env(SYNTH_STRATEGY)
+  % set ::env(SYNTH_STRATEGY) "DELAY 0"
+  % echo $::env(SYNTH_BUFFERING)
+  % echo $::env(SYNTH_SIZING)
+  % set ::env(SYNTH_SIZING) 1
+  % echo $::env(SYNTH_DRIVING_CELL)
+
+```
+
+ ```
+
 run_floorplan
 run_placement
 
@@ -1002,8 +1021,7 @@ In Terminal
 
 ```
 
-cd home/iswarya//OpenLane/designs/picorv32a/runs/RUN_2023.09.17_14.20.42/results/placement
-magic -T /home/iswarya/OpenLane/open_pdks/sky130/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.nom.lef def read picorv32.def &
+magic -T /home/iswarya/OpenLane/vsdstdcelldesign/libs/sky130A.tech lef read /home/iswarya/OpenLane/designs/picorv32a/runs/RUN_2023.09.18_15.52.03/tmp/merged.nom.lef def read /home/iswarya/OpenLane/designs/picorv32a/runs/RUN_2023.09.18_15.52.03/results/placement/picorv32.def &
 
 ```
  
