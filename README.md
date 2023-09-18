@@ -893,7 +893,7 @@ port VPWR class inout
 port VPWR use power
 
 port VGND class inout
-port VPWR use ground
+port VGND use ground
 
 ```
 Generate the lef file using below command:
